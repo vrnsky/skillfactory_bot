@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.ws.soap.saaj.SaajSoapMessageFactory;
-import ru.cbr.web.GetCursOnDateXML;
+import ru.skillfactorydemo.tgbot.dto.GetCursOnDateXML;
 import ru.skillfactorydemo.tgbot.dto.GetCursOnDateXmlResponse;
 import ru.skillfactorydemo.tgbot.dto.GetCursOnDateXmlResult;
 import ru.skillfactorydemo.tgbot.dto.ValuteCursOnDate;

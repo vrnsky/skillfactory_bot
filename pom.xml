@@ -147,33 +147,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxws-maven-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <id>generatewsdl</id>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                        <configuration>
-                            <vmArgs>
-                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-                                <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
-                            </vmArgs>
-                            <wsdlDirectory>${basedir}/src/main/resources/</wsdlDirectory>
-                            <args>
-                                <arg>-b</arg>
-                                <arg>https://www.w3.org/2001/XMLSchema.xsd</arg>
-                            </args>
-                            <wsdlFiles>
-                                <wsdlFile>${basedir}/src/main/resources/dailyinfo.wsdl</wsdlFile>
-                            </wsdlFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 

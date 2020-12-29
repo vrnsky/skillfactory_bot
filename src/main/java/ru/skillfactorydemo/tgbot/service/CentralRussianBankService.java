@@ -1,9 +1,8 @@
 package ru.skillfactorydemo.tgbot.service;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
-import ru.cbr.web.GetCursOnDateXML;
+import ru.skillfactorydemo.tgbot.dto.GetCursOnDateXML;
 import ru.skillfactorydemo.tgbot.dto.GetCursOnDateXmlResponse;
 import ru.skillfactorydemo.tgbot.dto.ValuteCursOnDate;
 
@@ -28,6 +27,7 @@ public class CentralRussianBankService extends WebServiceTemplate {
         XMLGregorianCalendar xmlGregCal = DatatypeFactory.newInstance().newXMLGregorianCalendar(cal);
         getCursOnDateXML.setOnDate(xmlGregCal);
 
+        System.out.println(getCursOnDateXML);
         GetCursOnDateXmlResponse response = (GetCursOnDateXmlResponse) marshalSendAndReceive(cbrApiUrl, getCursOnDateXML);
 
         if (response == null) {
